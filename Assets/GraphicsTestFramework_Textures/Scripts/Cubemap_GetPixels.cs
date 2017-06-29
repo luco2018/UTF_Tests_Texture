@@ -14,6 +14,7 @@ public class Cubemap_GetPixels: MonoBehaviour
 	public bool getPixel = false;
 	public float scale = 1f;
 	public int column = 10;
+    public bool rotate = true;
 	//public TextureFormat tf;
 
 	private List<CubemapFace> cubemapFaces = new List<CubemapFace> () {
@@ -114,9 +115,13 @@ public class Cubemap_GetPixels: MonoBehaviour
 
 	void Update ()
 	{
-		foreach (Transform t in spheres) {
-			t.Rotate ((Vector3.up * 6f) * Time.deltaTime);
-		}
+        if (rotate)
+        {
+            foreach (Transform t in spheres)
+            {
+                t.Rotate((Vector3.up * 6f) * Time.deltaTime);
+            }
+        }
 	}
 
 }
