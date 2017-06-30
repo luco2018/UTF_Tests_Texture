@@ -53,7 +53,11 @@ public class Cubemap_GetPixels: MonoBehaviour
 
 		#if UNITY_STANDALONE
 		texturesTemp = Resources.LoadAll ("Cubemaps/Standalone");
-		#endif 
+		#endif
+
+        #if UNITY_WEBGL
+		texturesTemp = Resources.LoadAll ("Cubemaps/WebGL");
+		#endif
 
 		float dist = 1.25f * scale;
 

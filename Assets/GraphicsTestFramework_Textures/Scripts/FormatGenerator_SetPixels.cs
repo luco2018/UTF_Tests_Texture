@@ -12,8 +12,9 @@ public class FormatGenerator_SetPixels: MonoBehaviour
 	private Color[] baseTex;
 	public bool setPixel = false;
 	public bool debugMode = false;
+    public int widthheight = 256;
 
-	public List<TextureFormat> setPixelSupport = new List<TextureFormat> () {TextureFormat.Alpha8,
+    public List<TextureFormat> setPixelSupport = new List<TextureFormat> () {TextureFormat.Alpha8,
 		TextureFormat.RGB24,
 		TextureFormat.ARGB32,
 		TextureFormat.RGBA32,
@@ -64,13 +65,13 @@ public class FormatGenerator_SetPixels: MonoBehaviour
 				if (setPixelSupport.Contains (format)) {
 					if (debugMode)
 						Debug.Log ("Texture supported " + format.ToString ());
-					tex = new Texture2D (256, 256, format, false);
+					tex = new Texture2D (widthheight, widthheight, format, false);
 					if (!setPixel) {
 						tex.SetPixels (baseTex);
 					} else {
 						int i = 0;
-						for (int y = 0; y < 256; y++) {
-							for (int x = 0; x < 256; x++) {
+						for (int y = 0; y < widthheight; y++) {
+							for (int x = 0; x < widthheight; x++) {
 								tex.SetPixel (x, y, baseTex [i]);
 								i++;
 							}

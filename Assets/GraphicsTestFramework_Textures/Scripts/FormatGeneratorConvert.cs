@@ -10,8 +10,9 @@ public class FormatGeneratorConvert : MonoBehaviour
 	private Texture2D warningTexture;
 	private Texture2D errorTexture;
 	public Shader _shader;
+    public int widthheight = 256;
 
-	private List<TextureFormat> setPixelSupport = new List<TextureFormat> ();
+    private List<TextureFormat> setPixelSupport = new List<TextureFormat> ();
 
 	void Start ()
 	{
@@ -52,7 +53,7 @@ public class FormatGeneratorConvert : MonoBehaviour
 			Texture2D tex = null;
 			if (SystemInfo.SupportsRenderTextureFormat (format) && isFormat) {
 				Debug.Log ("Texture supported " + format.ToString ());
-				tex = new Texture2D (256, 256, tf, false);
+				tex = new Texture2D (widthheight, widthheight, tf, false);
 				Graphics.ConvertTexture (refTexture, tex);
 				LabelMaker.MakeLabel (format.ToString (), Color.green, t);
 			} else {

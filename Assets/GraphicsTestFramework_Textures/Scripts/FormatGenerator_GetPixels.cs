@@ -12,6 +12,7 @@ public class FormatGenerator_GetPixels: MonoBehaviour
 	private Color[] baseTex;
 	private List<Texture2D> textures = new List<Texture2D> ();
 	public bool getPixel = false;
+    public int widthheight = 256;
 	//public TextureFormat tf;
 
 	private List<TextureFormat> setPixelSupport = new List<TextureFormat> ();
@@ -58,14 +59,14 @@ public class FormatGenerator_GetPixels: MonoBehaviour
 		Material mat = new Material (_shader);
 
 		Texture2D tex = null;
-		tex = new Texture2D (256, 256, TextureFormat.ARGB32, false);
-		Color[] pixels = new Color[256 * 256];
+		tex = new Texture2D (widthheight, widthheight, TextureFormat.ARGB32, false);
+		Color[] pixels = new Color[widthheight * widthheight];
 		if (!getPixel) {
 			pixels = _texture.GetPixels ();
 		} else {
 			int i = 0;
-			for (int y = 0; y < 256; y++) {
-				for (int x = 0; x < 256; x++) {
+			for (int y = 0; y < widthheight; y++) {
+				for (int x = 0; x < widthheight; x++) {
 					pixels [i] = _texture.GetPixel (x, y);
 					i++;
 				}
