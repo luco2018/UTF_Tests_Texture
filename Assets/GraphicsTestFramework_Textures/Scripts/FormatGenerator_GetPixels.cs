@@ -39,8 +39,8 @@ public class FormatGenerator_GetPixels: MonoBehaviour
 		texturesTemp = Resources.LoadAll ("Textures/Android");
 		#endif
 
-		#if UNITY_STANDALONE
-		texturesTemp = Resources.LoadAll ("Textures/Standalone");
+		#if UNITY_WEBGL
+		texturesTemp = Resources.LoadAll ("Textures/WebGL");
 		#endif 
 
 		foreach (Object tex in texturesTemp) {
