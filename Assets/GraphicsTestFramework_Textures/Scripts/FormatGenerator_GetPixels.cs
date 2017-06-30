@@ -31,6 +31,10 @@ public class FormatGenerator_GetPixels: MonoBehaviour
 		int i = 0;
 		Object[] texturesTemp;
 
+        #if UNITY_STANDALONE
+        texturesTemp = Resources.LoadAll ("Textures/Standalone");
+		#endif 
+
 		#if UNITY_IPHONE
 		texturesTemp = Resources.LoadAll ("Textures/iOS");
 		#endif
