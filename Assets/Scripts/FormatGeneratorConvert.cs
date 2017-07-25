@@ -11,6 +11,7 @@ public class FormatGeneratorConvert : MonoBehaviour
 	private Texture2D errorTexture;
 	public Shader _shader;
     public int widthheight = 256;
+    //public bool callback = false;
 
     private List<TextureFormat> setPixelSupport = new List<TextureFormat> ();
 
@@ -31,7 +32,8 @@ public class FormatGeneratorConvert : MonoBehaviour
 			CreateTextureQuad (tf, new Vector3 (1.25f * Mathf.Repeat (i, 10f), -1.25f * Mathf.Floor (i / 10f), 0f));
 			i++;
 		}
-	}
+        GraphicsTestFramework.TestTypeManager.Instance.GetActiveTestLogic().WaitCallback();
+    }
 
 	void CreateTextureQuad (RenderTextureFormat format, Vector3 pos)
 	{

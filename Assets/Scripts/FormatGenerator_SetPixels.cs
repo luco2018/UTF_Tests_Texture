@@ -50,7 +50,8 @@ public class FormatGenerator_SetPixels: MonoBehaviour
 			CreateTextureQuad (tf, new Vector3 (1.25f * Mathf.Repeat (i, 10f), -1.25f * Mathf.Floor (i / 10f), 0f));
 			i++;
 		}
-	}
+        GraphicsTestFramework.TestTypeManager.Instance.GetActiveTestLogic().WaitCallback();
+    }
 
 	void CreateTextureQuad (TextureFormat format, Vector3 pos)
 	{

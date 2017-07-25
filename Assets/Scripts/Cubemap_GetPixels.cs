@@ -68,7 +68,8 @@ public class Cubemap_GetPixels: MonoBehaviour
 		}
 		focusScript.Focus ();
 		yield return new WaitForEndOfFrame ();
-	}
+        GraphicsTestFramework.TestTypeManager.Instance.GetActiveTestLogic().WaitCallback();
+    }
 
 	void CreateSphere (Cubemap _texture, Vector3 pos)
 	{

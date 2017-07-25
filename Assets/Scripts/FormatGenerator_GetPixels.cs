@@ -53,7 +53,8 @@ public class FormatGenerator_GetPixels: MonoBehaviour
 			CreateTextureQuad (tex as Texture2D, new Vector3 (1.25f * Mathf.Repeat (i, 10f), -1.25f * Mathf.Floor (i / 10f), 0f));
 			i++;
 		}
-	}
+        GraphicsTestFramework.TestTypeManager.Instance.GetActiveTestLogic().WaitCallback();
+    }
 
 	void CreateTextureQuad (Texture2D _texture, Vector3 pos)
 	{
