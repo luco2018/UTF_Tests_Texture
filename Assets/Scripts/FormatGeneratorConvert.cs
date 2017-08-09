@@ -67,7 +67,7 @@ public class FormatGeneratorConvert : MonoBehaviour
 			mat.mainTexture = tex;
 			mat.name = format.ToString ();
 			mr.material = mat;
-			tex.wrapMode = TextureWrapMode.Clamp;
+			tex.wrapMode = TextureWrapMode.Repeat;
 			go.name = format.ToString ();
 			t.SetParent (transform);
 			t.position = pos;

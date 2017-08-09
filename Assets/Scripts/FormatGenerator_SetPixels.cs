@@ -96,7 +96,7 @@ public class FormatGenerator_SetPixels: MonoBehaviour
 			mat.name = format.ToString ();
 			go.name = format.ToString ();
 			mr.material = mat;
-			tex.wrapMode = TextureWrapMode.Clamp;
+			tex.wrapMode = TextureWrapMode.Repeat;
 			tex.Apply ();
 			t.SetParent (transform);
 			t.position = pos;
