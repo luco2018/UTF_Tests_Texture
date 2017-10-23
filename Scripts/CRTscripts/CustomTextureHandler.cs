@@ -5,7 +5,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class CustomTextureHandler : MonoBehaviour {
 
-    #if UNITY_EDITOR_2017_1_OR_NEWER
+    #if UNITY_2017_1_OR_NEWER
 
     public CustomRenderTexture customRenderTexture;
     public CustomRenderTextureUpdateZone[] zones;

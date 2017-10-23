@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProjectileController : MonoBehaviour
 {
-    #if UNITYENGINE_2017_1_OR_NEWER
+    #if UNITY_2017_1_OR_NEWER
 
     private bool hasHit;
 
