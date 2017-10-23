@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class chain_1_updating : MonoBehaviour
 {
+	#if UNITYENGINE_2017_1_OR_NEWER
+
     //public float factor = 0;
 
 	public CustomRenderTexture	m_CustomRenderTexture;
@@ -82,4 +84,6 @@ public class chain_1_updating : MonoBehaviour
 			//}
 		}
 	}
+
+	#endif
 }

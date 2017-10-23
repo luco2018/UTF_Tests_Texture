@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ProjectileController : MonoBehaviour
 {
+    #if UNITYENGINE_2017_1_OR_NEWER
 
     private bool hasHit;
 
@@ -27,5 +28,5 @@ public class ProjectileController : MonoBehaviour
 
         }
     }
-
+    #endif
 }

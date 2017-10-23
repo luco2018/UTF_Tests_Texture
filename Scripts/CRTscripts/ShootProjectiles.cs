@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShootProjectiles : MonoBehaviour
 {
+    # if UNITYENGINE_2017_1_OR_NEWER
+
     public Transform hitObject;
     public GameObject projectile;
     public GameObject hitEffect;
@@ -113,4 +115,5 @@ public class ShootProjectiles : MonoBehaviour
         counter++;
 
     }
+    #endif
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class CustomTextureHandler : MonoBehaviour {
 
+    #if UNITY_EDITOR_2017_1_OR_NEWER
+
     public CustomRenderTexture customRenderTexture;
     public CustomRenderTextureUpdateZone[] zones;
     public int zonesX = 1;
@@ -101,5 +103,7 @@ public class CustomTextureHandler : MonoBehaviour {
         updateCoroutine = null;
         customRenderTexture.Initialize();
     }
+
+    #endif
 
 }
